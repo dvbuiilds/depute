@@ -1,0 +1,43 @@
+.navbar{
+  background-color: $bg-color;
+}
+
+.login{
+  color: $color2 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+height: 2.25rem;
+border-radius: 5px;
+}
+@media (max-width: 500px) {
+  .getstarted {
+    margin-left: 28%; }
+}
+.lp{
+  background-color: $bg-color;
+  color: $color;
+  font-family: 'Commissioner', sans-serif;
+}
+.side{
+  padding-left: 15rem;
+  padding-right:15rem;
+}
+.tn{width:95%;
+border: 5px solid #6492FD;}
+.con{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+flex-direction: column;
+}
+.entbut{
+  background-color:#2E9191;
+  color:$color;
+  width:430px;
+  font-size: 1.3rem;
+}
+.making{
+font-weight: 600;
+}

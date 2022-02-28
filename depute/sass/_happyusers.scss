@@ -1,0 +1,35 @@
+.box{
+  background-color: #456BC3;
+  color:#ffffff;
+}
+.box a:link {
+text-decoration: none;
+  color:#ffffff;
+}
+
+.box a:visited {
+text-decoration: none;
+  color:#ffffff;
+
+}
+
+.box a:hover {
+text-decoration:none;
+  color:#ffffff;
+}
+
+.box a:active {
+text-decoration: none;
+  color:#ffffff;
+}
+.obox{
+  @extend .box;
+    background-color: #F2984D;
+}
+.line{
+      border-left: 6px solid #B1C8FF;
+      height: 200px;
+      position: relative;
+      margin-left: -20px;
+      top: 0;
+    }
