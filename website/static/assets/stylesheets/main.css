@@ -1,0 +1,177 @@
+/* Headings */
+.first-h1-page {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.desc-below-main-h1{
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.h-2{
+  font-size: 40px;
+  font-weight: 400 !important;
+}
+
+.normal-text{
+  font-size: 20px;
+}
+
+.dark-bg-text-clr{
+  color: #f3f3f3;
+}
+
+.light-bg-text-clr{
+  color: #2F3545;
+}
+
+
+
+/* Navbar Classes */
+.navbar {
+  background-color: #12327d;
+}
+
+.login {
+  color: #000000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 2.25rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .getstarted {
+    margin-left: 28%;
+  }
+}
+
+.lp {
+  background-color: #12327d;
+  color: #F3F3F3;
+  font-family: "Commissioner", sans-serif;
+}
+
+.side {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.tn {
+  width: 100%;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.top-section-button{
+  background-color: #2e9191;
+  color: #F3F3F3;
+  width: 400px;
+  font-size: 20px;
+}
+
+.entbut {
+  background-color: #2e9191;
+  color: #F3F3F3;
+  width: 430px;
+  font-size: 1.3rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  font-family: "Commissioner", sans-serif;
+}
+
+.blue {
+  background-color: #dbe5ff;
+}
+
+#info .col-md-4:nth-child(2) {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  #info .col-md-4:nth-child(2) {
+    transform: scale(1);
+  }
+}
+
+.btext {
+  color: #335ec3;
+}
+
+.box,
+.obox {
+  background-color: #456bc3;
+  color: #ffffff;
+}
+
+.box a:link,
+.obox a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.box a:visited,
+.obox a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.box a:hover,
+.obox a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.box a:active,
+.obox a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.obox {
+  background-color: #f2984d;
+}
+
+.line {
+  border-left: 6px solid #b1c8ff;
+  height: 200px;
+  position: relative;
+  margin-left: -20px;
+  top: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Commissioner", sans-serif;
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+    font-size: 1.5rem;
+  }
+}
+
+.depute {
+  max-width: 110%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.dot ul {
+  list-style-type: none;
+}
