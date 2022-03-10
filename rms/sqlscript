@@ -1,0 +1,31 @@
+(venv) PS D:\Projects\depute> python manage.py sqlmigrate rms 0001
+--
+-- Create model category_a
+--
+CREATE TABLE `rms_category_a` (`cta_id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `cta_name` varchar(20) NOT NULL);
+--
+-- Create model category_b
+--
+CREATE TABLE `rms_category_b` (`ctb_id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `ctb_name` varchar(20) NOT NULL);
+--
+-- Create model recruiter
+--
+CREATE TABLE `rms_recruiter` (`rid` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(30) NOT NULL, `email` varchar(254) NOT NULL, `password` varchar(20) NOT NULL, `phno` varchar(10) NOT NULL, `company_name` varchar(30) NOT NULL);
+--
+-- Create model jobs
+--
+CREATE TABLE `rms_jobs` (`job_id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `role_name` varchar(100) NOT NULL, `stipend` double precision NOT NULL, `location` varchar(50) NOT NULL, `vacancies` integer NOT NULL, `company_name` varchar(30) NOT NULL, `experience` bool NOT NULL, `post_date` datetime(6) NOT NULL, `last_date` datetime(6) NOT NULL, `cat1_id` bigint NULL, `cat2_id` bigint NULL, `rec_id_id` bigint NOT NULL);
+--
+-- Create model candidate
+--
+CREATE TABLE `rms_candidate` (`cid` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `cname` varchar(30) NOT NULL, `cage` integer NOT NULL, `cemail` varchar(254) NOT NULL, `cpassword` varchar(30) NOT NULL, `cphno` varchar(10) NOT NULL, `resume_link` varchar(100) NOT NULL, `job_cat_id` bigint NULL);
+--
+-- Create model application
+--
+CREATE TABLE `rms_application` (`app_id` bigint AUTO_INCREMENT NOT NULL PRIMARY KEY, `app_time` datetime(6) NOT NULL, `can_id_id` bigint NOT NULL, `rec_id_id` bigint NOT NULL);
+ALTER TABLE `rms_jobs` ADD CONSTRAINT `rms_jobs_cat1_id_283d3d95_fk_rms_category_a_cta_id` FOREIGN KEY (`cat1_id`) REFERENCES `rms_category_a` (`cta_id`);
+ALTER TABLE `rms_jobs` ADD CONSTRAINT `rms_jobs_cat2_id_d0a53bb8_fk_rms_category_b_ctb_id` FOREIGN KEY (`cat2_id`) REFERENCES `rms_category_b` (`ctb_id`);
+ALTER TABLE `rms_jobs` ADD CONSTRAINT `rms_jobs_rec_id_id_e63b43d0_fk_rms_recruiter_rid` FOREIGN KEY (`rec_id_id`) REFERENCES `rms_recruiter` (`rid`);
+ALTER TABLE `rms_candidate` ADD CONSTRAINT `rms_candidate_job_cat_id_df84f3a8_fk_rms_category_a_cta_id` FOREIGN KEY (`job_cat_id`) REFERENCES `rms_category_a` (`cta_id`);
+ALTER TABLE `rms_application` ADD CONSTRAINT `rms_application_can_id_id_992e7031_fk_rms_candidate_cid` FOREIGN KEY (`can_id_id`) REFERENCES `rms_candidate` (`cid`);
+ALTER TABLE `rms_application` ADD CONSTRAINT `rms_application_rec_id_id_bae4de98_fk_rms_recruiter_rid` FOREIGN KEY (`rec_id_id`) REFERENCES `rms_recruiter` (`rid`);
