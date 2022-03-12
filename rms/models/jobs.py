@@ -16,4 +16,3 @@ class jobs(models.Model):
     experience = models.BooleanField(default=1)
     post_date = models.DateTimeField(auto_now_add=True)
     last_date = models.DateTimeField()
-
