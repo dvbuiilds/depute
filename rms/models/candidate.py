@@ -11,3 +11,4 @@ class candidate(models.Model):
     job_cat = models.ForeignKey(to=category_a, on_delete=models.SET_NULL, default=1, null=True)
     cphno = models.CharField(max_length=10)
     resume_link = models.FileField(upload_to='rms/resumes/')
+    

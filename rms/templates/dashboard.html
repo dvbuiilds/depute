@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+    <section>
+        {% if request.session.Name %}
+        <p>{{request.session.Name}}</p>
+        {% endif %}
+    </section>
+{% endblock %}
