@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from django.db import models
 from .recruiter import recruiter
 from .category1 import category_a

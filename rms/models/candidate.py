@@ -1,4 +1,3 @@
-from xml.etree.ElementInclude import default_loader
 from django.db import models
 from .category1 import category_a
 

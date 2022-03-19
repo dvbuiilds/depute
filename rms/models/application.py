@@ -1,4 +1,3 @@
-from os import stat
 from django.db import models
 
 from rms.models.jobs import jobs
