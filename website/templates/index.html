@@ -2,39 +2,49 @@
 {% block content %}
 {% load static %}
 
-
     <!-- Top Section -->
-    <section class="lp">
-        <br>
-        <div class="container py-5">
-            <div class="row">
+    <section class="top-section" >
+        <div class="container" >
+            <div class="row max-space"></div>
+            <div class="row center">
                 <div class="col-md-6">
-                    <img class="tn" src="/Video-Thumbnail.png">
+                    <div class="">
+                        <img class="tn" src="{% static 'assets\img\Video-Thumbnail.png' %}">
+                    </div>
                 </div>
-                <div class="col-md-6 con">
-                    <h1 class="first-h1-page">Making Your way of <br> working more efficient</h1>
-                    <br>
-                    <p class="desc-below-main-h1">Enterprises utilize our inhouse experts for scaling up seamlessly.</h3>
+                <div class="col-md-6">
+                    <div class="">
+                        <div class="row min-space"></div>
+                        <div class="row">
+                            <h1 class="first-h1-page px-1">Making Your way of <br> working more efficient</h1>
+                        </div>
+                        <div class="row">
+                            <p class="desc-below-main-h1">Enterprises utilize our inhouse experts for scaling up seamlessly.</h3>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row pt-5 mt-3">
+            <div class="row mid-space"></div>
+            <div class="row top-section-button-row " >
                 <div class="col-md-6 resp-width">
-                    <button class="top-section-button float-right">For Enterprises ></button>
+                    <a href="/outsource-to-us">
+                        <button class="top-section-button float-right">For Enterprises ></button>
+                    </a>
                 </div>
                 <div class="col-md-6 resp-width">
-                    <button class="top-section-button">Working Opportunities ></button>
+                    <button class="top-section-button">Start Working ></button>
                 </div>
             </div>
+            <div class="row max-space"></div>
         </div>
-        <br>
-        <br>
     </section>
+    
     <!-- Top Section Ends-->
 
     <!-- Second Section -->
-    <section class="light-bg">
-        <div class="container py-5">
-            <br>
+    <section class="light-bg center" >
+        <div class="container">
+            <div class="row max-space"></div>
             <div class="row center">
                 <h2 class="h-2 center">We’ll Be The Last Agency You Ever Work With</h2>
             </div>
@@ -46,25 +56,26 @@
             </div>
             <div class="row center">
                 <br>
-                <img style="width: 80vw;" src="Depute-Operation-Map.png" alt="">
+                <img style="width: 80vw;" src="{% static 'assets/img/Depute-Operation-Map.png' %}" alt="">
             </div>
-            <br>
-            <br>
+            <div class="row max-space"></div>
+            <div class="row min-space hide-display"></div>
         </div>
     </section>
     <!-- Second Section Ends -->
 
     <!-- Our Offering -->
-    <section class="py-5 text-center">
-        <br>
+    <section class="text-center">
         <div class="container">
+            <div class="row max-space"></div>
             <h2 class="h-2 center">Our Offerings</h2>
             <p class="normal-text center">We’ll be the last agency you will be working with</p>
-            <div id="info" class="py-5 ">
+            <div class="row min-space"></div>
+            <div id="info" class="pt-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="blue-box py-5 px-4">
+                            <div class="blue-box p-4">
                                 <svg width="50" height="50" viewBox="0 0 54 41" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -74,11 +85,11 @@
                                 <h3 class="h4 my-4">Hiring</h3>
                                 <p class="desc mb-4" style="text-align: justify;" >Despite is working in hiring a skilled Campus Recruiter for functioning as a liaison with a variety of universities and assisting us to recruit contemporary aspirants as well as high-potential beginners.
                                 </p>
-                                <a href="#"><u>Know More></u></a>
+                                <a href="/hire-with-us"><u>Know More></u></a>
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <div class="blue-box py-5 px-4">
+                            <div class="blue-box p-4">
                                 <svg width="50" height="50" viewBox="0 0 63 63" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -88,13 +99,11 @@
                                 <h3 class="h4 my-4">Outsourcing</h3>
                                 <p class="desc mb-4" style="text-align: justify;" >Outsourcing can further benefit in  making your career more adaptable and robust, proficient to modify market circumstances and challenges while delivering expenditure savings and assistance level modifications.
                                 </p>
-                                <br>
-                                <a href="#"><u>Know More></u></a>
+                                <a href="/outsource-to-us"><u>Know More></u></a>
                             </div>
                         </div>
-                        
                         <div class="col-md-4">
-                            <div class="blue-box py-5 px-4">
+                            <div class="blue-box p-4">
                                 <svg width="50" height="50" viewBox="0 0 51 51" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_183_224)">
@@ -112,23 +121,26 @@
                                 <h3 class="h4 my-4">Find Jobs</h3>
                                 <p class="desc mb-4" style="text-align: justify;">Depute is a deluxe network of prime freelance developers, inventors, product executives, finance professionals and reputed project managers. Leading brands hire Depute freelancers for their vital projects. 
                                 </p>
-                                <a href="#"><u>Know More></u></a>
+                                <a href="#" ><u>Know More></u></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="row max-space"></div>
         </div>
         <br>
     </section>
     <!-- Our Offerings Ends -->
+    
+
 
     <!-- Numbers -->
     <section class="light-bg">
-        <br>
-        <div class="py-5">
+        <div class="container">
+            <div class="row max-space"></div>
             <h2 class="h-2 center">Numbers make us stand out</h2>
-            <br>
+            <div class="row min-space"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -145,56 +157,55 @@
                     </div>
                 </div>
             </div>
+            <div class="row max-space"></div>
         </div>
         <br>
     </section>
     <!-- Numbers Ends -->
 
     <!-- Clients -->
-    <section class="py-5 text-center">
-        <br>
-        <h2 class="h-2 center">Our Clients</h2>
-        <br>
-        <br>
+    <section class="text-center">
         <div class="container">
-            <div class=" row">
-                <div class="col-md-3 center">
-                    <img class="img-arr img-sizing" src="foreignadmits.png" alt="">
-                </div>
-                <div class="col-md-3 center">
-                    <img class="img-arr" src="dear-sir.png" alt="">
-                </div>
-                <div class="col-md-3 center">
-                    <img class="img-arr img-sizing" src="Questt.png" alt="">
-                </div>
-                <div class="col-md-3 center">
-                    <img class="img-arr img-sizing" src="Kamero-Name.png" alt="">
+            <div class="row max-space"></div>
+            <h2 class="h-2 center">Our Clients</h2>
+                <div class="row min-space"></div>   
+                <div class="container">
+                    <div class=" row">
+                    <div class="col-md-3 center">
+                        <img class="img-arr img-sizing" src="{% static 'assets/img/foreignadmits.png' %}" alt="">
+                    </div>
+                    <div class="col-md-3 center">
+                        <img class="img-arr" src="{% static 'assets/img/dear-sir.png' %}" alt="">
+                    </div>
+                    <div class="col-md-3 center">
+                        <img class="img-arr img-sizing" src="{% static 'assets/img/Questt.png' %}" alt="">
+                    </div>
+                    <div class="col-md-3 center">
+                        <img class="img-arr img-sizing" src="{% static 'assets/img/Kamero-Name.png' %}" alt="">
+                    </div>
                 </div>
             </div>
+            <div class="row min-space"></div>   
+            <div class="row center normal-text ">
+                <a href="#"><u>Read Case Studies ></u></a>
+            </div>
+            <div class="row max-space"></div>
         </div>
-        <br>
-        <br>
-
-        <div class="row center normal-text ">
-            <a href="#"><u>Read Case Studies ></u></a>
-        </div>
-        <br>
-        <br>
     </section>
     <!-- Clients Ends -->
 
     <!-- User Testimonials -->
     <section class="light-bg">
-        <br>
         <div class="container">
-            <div class="side py-5 text-center">
+            <div class="row max-space"></div>
+            <div class="text-center">
                 <h2 class="h-2 center">Source of Motivation - Happy Users</h2>
-                <br>
+                <div class="row mid-space"></div>
                 <div class="row">
                     <div class="col-md-1"></div>
                     <div class="col-md-6">
                         <div class="container">
-                            <img class="img-testimonial" src="testimonial-video-thumbnail.png" alt="">
+                            <img class="img-testimonial" src="{% static 'assets/img/testimonial-video-thumbnail.png' %}" alt="">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -222,49 +233,48 @@
                     <div class="col-md-1"></div>
                 </div>
             </div>
+            <div class="row max-space"></div>
+            <div class="row min-space"></div>
         </div>
-        <br>
-        <br>
     </section>
     <!-- User Testimonials Ends -->
 
     <!-- Last Navigation -->
     <section class="container">
-        <br>
-        <br>
-        <br>
+        <div class="row max-space"></div>
         <h2 class="h-2 center">What are You Waiting For? Start Now!</h2>
-        <br>
-        <br>
-        <div class="pb-5">
+        <div class="row mid-space"></div>
+        <div class="">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="box mt-3 py-5 center">
+                    <div class="box center">
                         <a href="#">
                             <h2 class="h-2"><b>Outsource ></b></h2>
                         </a>
                     </div>
+                    <div class="row min-space hide-display"></div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box mt-3 py-5 center">
+                    <div class="box center">
                         <a href="#">
                             <h2 class="h-2"><b>Hire With Us ></b></h2>
                         </a>
                     </div>
-                <!--/div>
-                <div class="line"-->
+                    <div class="row min-space hide-display"></div>
                 </div>
                 <div class="col-md-4">
-                    <div class="obox mt-3 center">
+                    <div class="obox center">
                         <a href="#">
                             <h2 class="h-2"><b>Find Work ></b></h2>
                         </a>
                     </div>
+                    <div class="row min-space hide-display"></div>
                 </div>
             </div>
         </div>
-        <br><br>
+        <div class="row max-space"></div>
     </section>
     <!-- Last Navigation Ends -->
+
 
 {% endblock %}

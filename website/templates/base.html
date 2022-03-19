@@ -7,10 +7,9 @@
     <meta charset="utf-8">
     <title>Best Outsourcing Partner Ever - Depute</title>
 
-    <link rel="stylesheet" href="{% static 'assets/stylesheets/main.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +39,7 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="nav navbar-nav ml-auto ">
                         <li class="nav-item py-1 mx-2">
-                            <a class="nav-link mx-auto" style="text-align: center;" href="#">About Us</a>
+                            <a class="nav-link mx-auto" style="text-align: center;" href="/about-us">About Us</a>
                         </li>
                         <li class="nav-item py-1 mx-2">
                             <a class="nav-link mx-auto" style="text-align: center;" href="#">Blogs</a>
@@ -48,7 +47,7 @@
                         <li class="nav-item py-1 mx-2">
                             <a class="nav-link mx-auto" style="text-align: center;" href="#">Find Work</a>
                         </li>
-                        <li class="py-1 mx-auto"><button class="login-button">Login/SignUp</button>
+                        <li class="py-1 mx-auto"><button href="" class="login-button">Login/SignUp</button>
                         </li>
                     </ul>
                 </div>
@@ -63,8 +62,8 @@
 
     <!-- Footer-->
     <footer>
-        <br><br><br>
         <div class="container-fluid">
+        <div class="row max-space"></div>
             <div class="spacing">
                 <div class="row">
                     <div class=" col-md-4">
@@ -86,19 +85,19 @@
                             </li>
                             <br>
                             <li>
-                                <p class="mb-2">About Us</p>
+                                <p class="mb-2 nav-item">About Us</p>
                             </li>
                             <li>
-                                <p class="mb-2">Why Depute</p>
+                                <p class="mb-2 nav-item">Why Depute</p>
                             </li>
                             <li>
-                                <p class="mb-2">What We Do</p>
+                                <p class="mb-2 nav-item">What We Do</p>
                             </li>
                             <li>
-                                <p class="mb-2">FAQs</p>
+                                <p class="mb-2 nav-item">FAQs</p>
                             </li>
                             <li>
-                                <p class="mb-2">Careers</p>
+                                <p class="mb-2 nav-item">Careers</p>
                             </li>
                         </ul>
                     </div>
@@ -109,29 +108,31 @@
                             </li>
                             <br>
                             <li>
-                                <p class="mb-2">How It works</p>
+                                <p class="mb-2 nav-item">How It works</p>
                             </li>
                             <li>
-                                <p class="mb-2">Why Depute</p>
+                                <p class="mb-2 nav-item">Why Depute</p>
                             </li>
                             <li>
-                                <p class="mb-2">Trust & Safety</p>
+                                <p class="mb-2 nav-item">Trust & Safety</p>
                             </li>
                             <li>
-                                <p class="mb-2">Help Center</p>
+                                <p class="mb-2 nav-item ">Help Center</p>
                             </li>
                             <li>
-                                <p class="mb-2">Stories</p>
+                                <p class="mb-2 nav-item">Stories</p>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 depute">
-                        <div class="row mb-3">
-                            <h4 class="">Connect With Us</h4>
+                    <div class="col-md-4 container depute">
+                        <div class="row center">
+                            <h4 class="mb-2">Connect With Us</h4>
                         </div>
-                        <div class="row">
+                        <div class="row min-space"></div>
+
+                        <div class="row container">
                             <div class="col-md-3 footer-social-row">
-                                <a href="#">
+                                <a href="https://www.linkedin.com/company/depute/">
                                     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 19.5C0 8.73045 8.73045 0 19.5 0C30.2696 0 39 8.73045 39 19.5C39 30.2696 30.2696 39 19.5 39C8.73045 39 0 30.2696 0 19.5ZM13.7804 16.1508H9.36131V29.4284H13.7804V16.1508ZM14.0715 12.0434C14.0428 10.7416 13.1118 9.75 11.6001 9.75C10.0883 9.75 9.1 10.7416 9.1 12.0434C9.1 13.3183 10.0591 14.3385 11.5427 14.3385H11.571C13.1118 14.3385 14.0715 13.3183 14.0715 12.0434ZM29.7175 21.8154C29.7175 17.7371 27.5374 15.839 24.6294 15.839C22.2832 15.839 21.2327 17.1277 20.6462 18.0318V16.1511H16.2265C16.2848 17.397 16.2265 29.4287 16.2265 29.4287H20.6462V22.0134C20.6462 21.6166 20.6749 21.2207 20.7917 20.9366C21.1111 20.1439 21.8383 19.3231 23.0592 19.3231C24.6589 19.3231 25.2984 20.5406 25.2984 22.3248V29.4284H29.7173L29.7175 21.8154Z" fill="white"/>
                                         </svg>
@@ -160,12 +161,12 @@
                                     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 19.5C0 8.73045 8.73045 0 19.5 0C30.2696 0 39 8.73045 39 19.5C39 30.2696 30.2696 39 19.5 39C8.73045 39 0 30.2696 0 19.5ZM21.5325 30.9656V20.3565H24.4611L24.8492 16.7006H21.5325L21.5375 14.8708C21.5375 13.9173 21.6281 13.4063 22.9976 13.4063H24.8284V9.75H21.8995C18.3813 9.75 17.143 11.5235 17.143 14.506V16.701H14.95V20.357H17.143V30.9656H21.5325Z" fill="white"/>
                                         </svg>
-                                        
                                 </a>
                             </div>
                         </div>
-                        <br>
-                        <h4 style="text-align: center;">Sign up to recieve our newsletter</h4>
+                        <div class="row min-space"></div>
+                        <div class="row min-space"></div>
+                        <h4 style="text-align: center; ">Sign up to recieve our newsletter</h4>
                         <br>
                         <div class="row">
                             <div class="content">
@@ -182,7 +183,7 @@
                 </div>
             </div>
         
-            <br><br>
+            <div class="row mid-space"></div>
             <center class="pb-1">Terms&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Privacy&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Sitemap&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;© 2022 Depute Pvt Ltd.</center>
         </div>
     </footer>
@@ -190,21 +191,12 @@
     
     <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="{% static 'scripts.js' %}"></script>
-    <script src="{% static 'hirescripts.js' %}"></script>
-
+    <script src="{% static 'assets/js/scripts.js' %}"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"> </script>
     <!--script-->
