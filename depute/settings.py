@@ -29,8 +29,9 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = [
-    'depute-website.herokuapp.com',
-    '127.0.0.1'
+    'depute.in',
+    '143.244.129.66',
+    '127.0.0.1',
 ]
 
 
