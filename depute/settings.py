@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os
-
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,7 +29,7 @@ DEBUG = config('DEBUG')
 ALLOWED_HOSTS = [
     'depute.in',
     '143.244.129.66',
-    '127.0.0.1',
+    '127.0.0.1'
 ]
 
 
