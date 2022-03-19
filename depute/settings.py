@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = [
+    'www.depute.in',
     'depute.in',
     '143.244.129.66',
     '127.0.0.1'
@@ -62,7 +64,10 @@ ROOT_URLCONF = 'depute.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'website/templates'),
+            os.path.join(BASE_DIR, 'rms/templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
