@@ -20,7 +20,7 @@ class jobs(models.Model):
     is_active = models.BooleanField(default=True)
 
     def __str__ (self):
-        return self.job_id
+        return str(self.job_id)
     
     @staticmethod
     def get_jobs_by_rec_id(_id):

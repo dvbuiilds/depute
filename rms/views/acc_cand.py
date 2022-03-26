@@ -1,18 +1,18 @@
-from curses.ascii import isalpha
+from django.views import View
 from django.shortcuts import render
 from django.contrib.auth.hashers import make_password
-from django.views import View
 from ..models import recruiter
+from curses.ascii import isalpha
 
 
-class rec_create_account(View):
+class cand_create_account(View):
     message = {
         'error': None
     }
     userrec = recruiter()
 
     def get(self, request):
-        return render(request, 'rec_account.html')
+        return render(request, 'cand_account.html')
     
     def post(self, request):
         input_fname = request.POST['fname']
@@ -43,7 +43,7 @@ class rec_create_account(View):
             self.userrec.password = make_password(input_pw)
             self.userrec.save()
             # Session object is to be made.
-            return render(request, 'rec_login.html')
+            return render(request, 'cand_login.html')
     
     def check_name(self, name):
         for c in name:
