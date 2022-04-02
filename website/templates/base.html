@@ -47,8 +47,20 @@
                         <li class="nav-item py-1 mx-2">
                             <a class="nav-link mx-auto" style="text-align: center;" href="/create-account-candidate">Find Work</a>
                         </li>
+                        {% if not request.session.rec_id %}
                         <li class="py-1 mx-auto"><a href="/login-recruiter"><button class="login-button">Login/SignUp</button></a>
                         </li>
+                        {% elif request.session.rec_id %}
+                        <form action="/logout" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="login-button">Logout</button>
+                        </form>
+                        {% elif request.session.cand_id %}
+                        <form action="/logout-user" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="login-button">Logout</button>
+                        </form>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

@@ -17,7 +17,7 @@ class candidate_login(View):
         if(candidate_object):
             if(check_password(input_pw, candidate_object.password) or input_pw == candidate_object.password):
                 request.session['Name'] = candidate_object.name
-                return HttpResponseRedirect('dashboard-recruiter')
+                return HttpResponseRedirect('dashboard-candidate')
             else:
                 return render(request, 'cand_login.html', {'error': "Wrong Password!"})
         return render(request, 'cand_login.html', {'error': "User account doesn't exists."})

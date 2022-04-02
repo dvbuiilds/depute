@@ -43,11 +43,7 @@
                                             <input required type="text" name="lname" class="form-control">
                                         </div>
                                     </div>
-                                    <!-- Company Name -->
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Company Name</label>
-                                        <input required type="text" name="company" class="form-control">
-                                    </div>
+                                    
                                     <!-- Phone Number -->
                                     <div class="mb-3">
                                         <label for="" class="form-label">Contact Number (with country code)</label>
@@ -63,6 +59,50 @@
                                       <label for="exampleInputPassword1" class="form-label">Set Password</label>
                                       <input required name="password" type="password" class="form-control" id="exampleInputPassword1" value="{{values.password}}" >
                                     </div>
+                                    <!-- Age -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Age</label>
+                                        <input required type="text" name="age" class="form-control">
+                                    </div>
+                                    <!-- Experience -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Job Type</label>
+                                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                        <datalist id="datalistOptions">
+                                            <option value="Internship/Part-time" aria-placeholder="Internship">
+                                            <option value="Full-Time">
+                                        </datalist>
+                                    </div>
+                                    <!-- Categories -->
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <!-- Category1 -->
+                                            <label for="exampleDataList" class="form-label">Category 1</label>
+                                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                            <datalist id="datalistOptions">
+                                                <option value="Internship/Part-time">
+                                                <option value="Full-Time">
+                                            </datalist>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <!-- Category2 -->
+                                            <label for="exampleDataList" class="form-label">Category 2</label>
+                                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                            <datalist id="datalistOptions">
+                                                <option value="Internship/Part-time">
+                                                <option value="Full-Time">
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        
+                                    </div>
+                                    <!-- Upload Resume -->
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Upload Resume (.pdf/.docx)</label>
+                                        <input class="form-control" type="file" id="formFile">
+                                      </div>
+                                    <!-- Bottom Bar -->
                                     <div class="row center" style=" font-size: 18px !important;">
                                         <div class="col-md-4" style="vertical-align: middle;">
                                             <p class="" style="vertical-align: middle; margin-bottom: 0%;"><a href="/login-recruiter">Log in</a></p>

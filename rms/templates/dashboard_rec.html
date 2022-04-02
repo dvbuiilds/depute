@@ -8,11 +8,7 @@
         <h1>The Dashboard</h1>
         <center>Here the functionalities like Posting Jobs, Getting number of application, downloading the pdf of applications.</center>
     </section>
-    
-    <form action="/logout" method="post">
-        {% csrf_token %}
-        <button type="submit" class="top-section-button">Logout</button>
-    </form>
+
     <form action="/download" method="post">
         {% csrf_token %}
         <button type="submit" class="top-section-button">Download Applications</button>
