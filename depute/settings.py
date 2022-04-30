@@ -30,7 +30,7 @@ DEBUG = config('DEBUG')
 ALLOWED_HOSTS = [
     'www.depute.in',
     'depute.in',
-    '143.244.129.66',
+    '162.241.70.147',
     '127.0.0.1'
 ]
 
