@@ -27,12 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = [
-    'www.depute.in',
-    'depute.in',
-    '162.241.70.147',
-    '127.0.0.1'
-]
+ALLOWED_HOSTS = [ 'www.depute.in', 'depute.in', config('IP_ADD'), '127.0.0.1' ]
 
 
 # Application definition
