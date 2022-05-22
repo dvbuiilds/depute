@@ -5,7 +5,7 @@ import csv
 from django.http import HttpResponse
 
 
-def cand_apps(request):
+def cand_apps_by_jid(request):
     jid=1
     response = HttpResponse(content_type='text/csv')
     writer = csv.writer(response)
