@@ -9,112 +9,349 @@
                     <div class="col-md-2"></div>
                     <div class="col-md-8 p-4" style="border-radius: 5px; background-color: #F6F9FF;">
                         <div class="container-fluid">
-                            <div class="row center">
-                                <div class="col-md-6">
-                                    <a href="/">
-                                        <img src="static\assets\img\Depute-logo.svg" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a class="float-right" href=""><p class="normal-text"> Are you a recruiter?</p></a>
-                                </div>
-                            </div>
-                            <div class="row center py-3">
-                                <h2 class="h-2 light-bg-text-clr">Sign in to continue</h2><br>
-                                <p></p>
-                            </div>
                             <div class="container">
-                                <form action = "/rec-create-account" method="post">
+                                <form action = "/" method="post">
+                                    <div class="row">
+                                        <h2>Final Step.</h2>
+                                    </div>
                                     {% csrf_token %}
                                     {% if error %}
                                     <div class="row">
                                         <p style="color: rgb(235, 0, 0);">*{{error}}</p>
                                     </div>
                                     {% endif %}
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <!-- First Name -->
-                                            <label for="" class="form-label">First Name</label>
-                                            <input required type="text" name="fname" class="form-control">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <!-- Last Name -->
-                                            <label for="" class="form-label">Last Name</label>
-                                            <input required type="text" name="lname" class="form-control">
-                                        </div>
+                                    <!-- Heading -->
+                                    <div class="row my-4">
+                                        <h4>Personal Details</h4>
+                                    </div>
+                                    <!-- First Name -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Name</label>
+                                        <input required type="text" name="fname" class="form-control">
                                     </div>
                                     
                                     <!-- Phone Number -->
                                     <div class="mb-3">
-                                        <label for="" class="form-label">Contact Number (with country code)</label>
+                                        <label for="" class="form-label">Contact Number</label>
                                         <input required type="text" name="number" class="form-control">
                                     </div>
                                     <!-- Email -->
                                     <div class="mb-3">
                                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                      <input required type="email" name="email" class="form-control" id="exampleInputEmail1" value="{{values.email}}" aria-describedby="emailHelp">
+                                      <input required type="email" name="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp">
                                     </div>
-                                    <!-- Password -->
+                                    <!-- Gender -->
                                     <div class="mb-3">
-                                      <label for="exampleInputPassword1" class="form-label">Set Password</label>
-                                      <input required name="password" type="password" class="form-control" id="exampleInputPassword1" value="{{values.password}}" >
-                                    </div>
-                                    <!-- Age -->
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Age</label>
-                                        <input required type="text" name="age" class="form-control">
-                                    </div>
-                                    <!-- Experience -->
-                                    <div class="mb-3">
-                                        <label for="exampleDataList" class="form-label">Job Type</label>
-                                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                        <label for="exampleDataList" class="form-label">Gender</label>
+                                        <input required type="text" name="gender" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Select any one.">
                                         <datalist id="datalistOptions">
-                                            <option value="Internship/Part-time" aria-placeholder="Internship">
-                                            <option value="Full-Time">
+                                            <option value="Male">
+                                            <option value="Female">
+                                            <option value="Others">
                                         </datalist>
                                     </div>
-                                    <!-- Categories -->
+
+                                    <!-- Next -->
                                     <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <!-- Category1 -->
-                                            <label for="exampleDataList" class="form-label">Category 1</label>
-                                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                                            <datalist id="datalistOptions">
-                                                <option value="Internship/Part-time">
-                                                <option value="Full-Time">
-                                            </datalist>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <!-- Category2 -->
-                                            <label for="exampleDataList" class="form-label">Category 2</label>
-                                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                                            <datalist id="datalistOptions">
-                                                <option value="Internship/Part-time">
-                                                <option value="Full-Time">
-                                            </datalist>
-                                        </div>
+                                        <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 20% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Next</button>
                                     </div>
+
+                                    <!-- Heading -->
+                                    <div class="row my-4">
+                                        <h4>Qualification Details</h4>
+                                    </div>
+                                    <!-- Highest Qualification -->
                                     <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Highest Qualification</label>
+                                        <input required type="text" name="highqual" class="form-control" list="datalistOptions2" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions2">
+                                            <option value="Doctorate/PhD">
+                                            <option value="Masters/Post-Graduation">
+                                            <option value="Gradution/Diploma">
+                                        </datalist>
+                                    </div>
+                                    <!-- Course -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Course</label>
+                                        <input required type="text" name="course" class="form-control" list="datalistOptions3" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions3">
+                                            <option value="B.Tech,/B.E.">
+                                            <option value="B.Sc">
+                                            <option value="BBA">
+                                            <option value="B.Com">
+                                            <option value="BCA">
+                                            <option value="B.Arch">
+                                            <option value="Other Graduate">
+                                            <option value="CA">
+                                            <option value="Integrated PG">
+                                            <option value="MA">
+                                            <option value="M.Com">
+                                            <option value="MS/M.Sc">
+                                            <option value="M.Tech">
+                                            <option value="MBA">
+                                            <option value="Other Post-Graduate">
+                                            <option value="PhD/Doctorate">
+                                            <option value="MPhil">
+                                            <option value="Other Doctorate">
+                                        </datalist>
+                                    </div>
+                                    <!-- Specialization -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Specialization</label>
+                                        <input required type="text" name="specialization" class="form-control">
+                                    </div>
+                                    <!-- University/Institute -->
+                                    <div class="mb-3">
+                                      <label for="exampleInputEmail1" class="form-label">University/Institute</label>
+                                      <input required type="text" name="university" class="form-control">
+                                    </div>
+                                    <!-- Gender -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Course Type</label>
+                                        <input required type="text" name="course-type" class="form-control" list="datalistOptions4" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions4">
+                                            <option value="Full Time">
+                                            <option value="Part Time">
+                                            <option value="Distance Learning">
+                                        </datalist>
+                                    </div>
+                                    <!-- Passing Year -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Passing Year</label>
+                                        <input required type="text" name="pass-year" class="form-control">
+                                    </div>
+
+                                    <!-- Skills -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Skills</label>
+                                        <input required type="text" name="pass-year" class="form-control">
+                                    </div>
+
+                                    <!-- Next Previous -->
+                                    <div class="row mb-3">
+                                        <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 20% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Next</button>
+                                        <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 20% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Next</button>
+                                    </div>
+
+                                    <!-- Heading -->
+                                    <div class="row my-4">
+                                        <h4>Employment Details</h4>
+                                    </div>
+                                    <!-- Work Status -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Work Status</label>
+                                        <input required type="text" name="work-status" class="form-control" list="datalistOptions5" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions5">
+                                            <option value="Fresher">
+                                            <option value="Experienced ">
+                                        </datalist>
+                                    </div>
+                                    <!-- Years of Experience -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Years of Experience (Ex. 1, 1.5)</label>
+                                        <input required type="text" name="yrofexp" class="form-control">
                                         
                                     </div>
-                                    <!-- Upload Resume -->
+                                    <!-- Current Status -->
                                     <div class="mb-3">
-                                        <label for="formFile" class="form-label">Upload Resume (.pdf/.docx)</label>
-                                        <input class="form-control" type="file" id="formFile">
-                                      </div>
-                                    <!-- Bottom Bar -->
-                                    <div class="row center" style=" font-size: 18px !important;">
-                                        <div class="col-md-4" style="vertical-align: middle;">
-                                            <p class="" style="vertical-align: middle; margin-bottom: 0%;"><a href="/login-recruiter">Log in</a></p>
-                                        </div>
-                                        <div class="col-md-4"></div>
-                                        <div class="col-md-4">
-                                            <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 80% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Create Account</button>
-                                        </div>
-                                        <!-- Button -->
+                                        <label for="exampleDataList" class="form-label">Are you currently employed</label>
+                                        <input required type="text" name="work-status" class="form-control" list="datalistOptions6" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions6">
+                                            <option value="Yes">
+                                            <option value="No ">
+                                        </datalist>
                                     </div>
-                                    
-                                  </form>
+                                    <!-- Current/Previous Company -->
+                                    <div class="mb-3">
+                                      <label for="" class="form-label">Current/Previous Company</label>
+                                      <input required type="text" name="prevcomp" class="form-control">
+                                    </div>
+                                    <!-- Job Title -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Job Title</label>
+                                        <input required type="text" name="jobtitle" class="form-control">
+                                    </div>
+                                    <!-- Current City -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Current City</label>
+                                        <input required type="text" name="currcity" class="form-control">
+                                    </div>
+                                    <!-- Working Since -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Working Since</label>
+                                        <input required type="text" name="worksince" class="form-control">
+                                    </div>
+                                    <!-- Current CTC -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Current CTC</label>
+                                        <input required type="text" name="currctc" class="form-control">
+                                    </div>
+                                    <!-- Current Fixed CTC -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Current Fixed CTC</label>
+                                        <input required type="text" name="currfixctc" class="form-control">
+                                    </div>
+                                    <!-- Notice Period -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Notice Period</label>
+                                        <input required type="text" name="notice" class="form-control">
+                                    </div>
+                                    <!-- Notice Period Negotiable -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Is Notice Period Negotiable?</label>
+                                        <input required type="text" name="work-status" class="form-control" list="datalistOptions6" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions6">
+                                            <option value="Yes">
+                                            <option value="No ">
+                                        </datalist>
+                                    </div>
+                                    <!-- Industry -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Industry</label>
+                                        <input required type="text" name="industry" class="form-control" list="datalistOptions7" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions7">
+                                            <option value="Transportation">
+                                            <option value="Telecommunication">
+                                            <option value="Pharmaceutical">
+                                            <option value="Media & News">
+                                            <option value="Hospitality">
+                                            <option value="Health Care">
+                                            <option value="Food & Beverages">
+                                            <option value="Finance & Economic">
+                                            <option value="Apparel &Fashion">
+                                            <option value="Entertainment">
+                                            <option value="Education">
+                                            <option value="Computer & Technology">
+                                            <option value="Agriculture">
+                                            <option value="Advertising & Marketing">
+                                            <option value="Consumer Goods">
+                                            <option value="Venture Capital& Private Equity">
+                                            <option value="Staffing & Recruiting">
+                                            <option value="Sports">
+                                            <option value="Management Consulting">
+                                            <option value="Market Research">
+                                            <option value="Retail">
+                                            <option value="Mobile Games">
+                                            <option value="Internet">
+                                            <option value="Music">
+                                            <option value="Outsourcing/Offsourcing">
+                                        </datalist>
+                                    </div>
+                                    <!-- Department -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Department</label>
+                                        <input required type="text" name="dept" class="form-control" list="datalistOptions8" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions8">
+                                            <option value="BFSI, Investments & Trading">
+                                            <option value="Customer Success, Service & Operations">
+                                            <option value="Data Science & Analytics">
+                                            <option value="Engineering – Hardware & Networks">
+                                            <option value="Engineering – Software & QA">
+                                            <option value="Finance & Accounting">
+                                            <option value="Human Resource">
+                                            <option value="IT & Information Security">
+                                            <option value="Marketing & Communication">
+                                            <option value="Product Management">
+                                            <option value="Project & Program Management">
+                                            <option value="Quality Assurance">
+                                            <option value="Sales & Business Development">
+                                            <option value="UX, Design & Architecture">
+                                            <option value="Consulting">
+                                            <option value="Content, Editorial & Journalism">
+                                            <option value="CSR & Social Service">
+                                            <option value="Research & Development">
+                                            <option value="Strategic & Top Management">
+                                            <option value="Teaching & Training">
+                                            <option value="Others">
+                                        </datalist>
+                                    </div>
+                                    <!-- Job Type -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Job Type</label>
+                                        <input required type="text" name="job-type" class="form-control" list="datalistOptions9" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions9">
+                                            <option value="In-office">
+                                            <option value="Remote ">
+                                        </datalist>
+                                    </div>
+
+                                    <!-- Next Previous -->
+                                    <div class="row mb-3">
+                                        <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 20% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Next</button>
+                                        <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 20% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Next</button>
+                                    </div>
+
+                                    <!-- Heading -->
+                                    <div class="row my-4">
+                                        <h4>Future Employment Details</h4>
+                                    </div>
+                                    <!-- Preferred Job Type -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Preferred Job Type</label>
+                                        <input required type="text" name="pref-job-type" class="form-control" list="datalistOptions10" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions10">
+                                            <option value="Permanent">
+                                            <option value="Temporary/Contract ">
+                                        </datalist>
+                                    </div>
+                                    <!-- Preferred Employment  -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Preferred Employment </label>
+                                        <input required type="text" name="pref-employment" class="form-control" list="datalistOptions11" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions11">
+                                            <option value="Full Time">
+                                            <option value="Part Time ">
+                                        </datalist>
+                                    </div>
+                                    <!-- Preferred Work Locations -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Preferred Work Locations</label>
+                                        <input required type="text" name="pref-work-loc" class="form-control">
+                                    </div>
+                                    <!-- Preferred Industry -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Preferred Industry</label>
+                                        <input required type="text" name="pref-industry" class="form-control">
+                                    </div>
+                                    <!-- Preferred Department -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Preferred Department</label>
+                                        <input required type="text" name="pref-industry" class="form-control">
+                                    </div>
+                                    <!-- Expected CTC -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Expected CTC</label>
+                                        <input required type="text" name="pref-industry" class="form-control">
+                                    </div>
+                                    <!-- Send me important updates on WhatsApp  -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Send me important updates on WhatsApp </label>
+                                        <input required type="text" name="pref-employment" class="form-control" list="datalistOptions6" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions6">
+                                            <option value="Yes">
+                                            <option value="No ">
+                                        </datalist>
+                                    </div>
+                                    <!-- Working Mode  -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Working Mode</label>
+                                        <input required type="text" name="pref-employment" class="form-control" list="datalistOptions9" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions9">
+                                            <option value="In-Office">
+                                            <option value="Remote ">
+                                        </datalist>
+                                    </div>
+                                    <!-- Are you willing to relocate?  -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Are you willing to relocate? </label>
+                                        <input required type="text" name="pref-employment" class="form-control" list="datalistOptions6" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions6">
+                                            <option value="Yes">
+                                            <option value="No ">
+                                        </datalist>
+                                    </div>
+                                        <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 20% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Submit</button>
+                                    </form>
                             </div>
                         </div>
                     </div>

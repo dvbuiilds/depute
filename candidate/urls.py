@@ -10,4 +10,5 @@ urlpatterns = [
     path('create-account-candidate',  cand_create_account.as_view(), name="candidate-create-account"),
     path('logout-user', logout_cand.as_view(), name='logout'),
     path('dashboard-candidate', Cauthmiddleware(dashboard_cand.as_view()), name='dashboard-candidate'),
+    path('details-candidate', Cauthmiddleware(candidate_details.as_view()), name='details-candidate'),
 ]
