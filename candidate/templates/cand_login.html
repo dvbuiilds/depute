@@ -1,0 +1,64 @@
+{% extends 'base2.html' %}
+{% block content %}
+{% load static %}
+
+    <section style="height: 100vh; display: flex; align-items: center; justify-content: center; background-color: white;">
+        <div class="container">
+            <div class="row" style="height: 60vh; background-color: transparent;">
+                <div class="container center" >
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 p-4" style="border-radius: 5px; background-color: #F6F9FF;">
+                        <div class="container-fluid">
+                            <div class="row center">
+                                <div class="col-md-6">
+                                    <a href="/">
+                                        <img src="static\assets\img\Depute-logo.svg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a class="float-right" href="/login-recruiter"><p class="normal-text"> Are you a recruiter?</p></a>
+                                </div>
+                            </div>
+                            <div class="row center py-3">
+                                <h2 class="h-2 light-bg-text-clr">Sign in to continue</h2><br>
+                                <p></p>
+                            </div>
+                            <div class="container">
+                                <form action = "/login-candidate" method="post">
+                                    {% csrf_token %}
+                                    {% if error %}
+                                    <div class="row">
+                                        <p style="color: rgb(235, 0, 0);">*{{error}}</p>
+                                    </div>
+                                    {% endif %}
+                                    <!-- Email -->
+                                    <div class="mb-3">
+                                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                      <input required type="email" name="email" class="form-control" id="exampleInputEmail1" value="{{values.email}}" aria-describedby="emailHelp">
+                                    </div>
+                                    <!-- Password -->
+                                    <div class="mb-3">
+                                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                                      <input required name="password" type="password" class="form-control" id="exampleInputPassword1" value="{{values.password}}" >
+                                    </div>
+                                    <div class="row center" style=" font-size: 18px !important;">
+                                        <div class="col-md-4" style="vertical-align: middle;">
+                                            <p class="" style="vertical-align: middle; margin-bottom: 0%;"><a href="/create-account-candidate">Create Account</a></p>
+                                        </div>
+                                        <div class="col-md-4"></div>
+                                        <!-- Button -->
+                                        <div class="col-md-4">
+                                            <button type="submit" class="top-section-button" style="background-color: #2e9191; border-radius: 5px !important; width: 80% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Sign in</button>
+                                        </div>
+                                    </div>
+                                    
+                                  </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

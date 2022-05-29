@@ -12,12 +12,14 @@ class candidate_login(View):
     def post(self, request):
         input_email = request.POST['email']
         input_pw = request.POST['password']
-        print(input_email, input_pw)
-        candidate_object = candidate.rec_by_emails(input_email)
+        candidate_object = candidate.cand_by_emails(input_email)
         if(candidate_object):
-            if(check_password(input_pw, candidate_object.password) or input_pw == candidate_object.password):
+            if(check_password(input_pw, candidate_object.password)):
                 request.session['Name'] = candidate_object.name
-                return HttpResponseRedirect('dashboard-candidate')
+                if(candidate_object.filled):
+                    return render(request, 'dashboard_cand.html')
+                else:
+                    return render(request, 'cand_details.html')
             else:
                 return render(request, 'cand_login.html', {'error': "Wrong Password!"})
         return render(request, 'cand_login.html', {'error': "User account doesn't exists."})

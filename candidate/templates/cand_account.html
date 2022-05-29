@@ -24,13 +24,31 @@
                                 <p></p>
                             </div>
                             <div class="container">
-                                <form action = "/login-recruiter" method="post">
+                                <form action = "/create-account-candidate" method="post">
                                     {% csrf_token %}
                                     {% if error %}
                                     <div class="row">
                                         <p style="color: rgb(235, 0, 0);">*{{error}}</p>
                                     </div>
                                     {% endif %}
+                                    <div class="row mb-3">
+                                        <div class="col-md-6">
+                                            <!-- First Name -->
+                                            <label for="" class="form-label">First Name</label>
+                                            <input required type="text" name="fname" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <!-- Last Name -->
+                                            <label for="" class="form-label">Last Name</label>
+                                            <input required type="text" name="lname" class="form-control">
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Phone Number -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Contact Number (with country code)</label>
+                                        <input required type="text" name="number" class="form-control">
+                                    </div>
                                     <!-- Email -->
                                     <div class="mb-3">
                                       <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -38,18 +56,25 @@
                                     </div>
                                     <!-- Password -->
                                     <div class="mb-3">
-                                      <label for="exampleInputPassword1" class="form-label">Password</label>
-                                      <input required name="password" type="password" class="form-control" id="exampleInputPassword1" value="{{values.password}}" >
+                                      <label for="exampleInputPassword1" class="form-label">Set Password</label>
+                                      <input required name="password1" type="password" class="form-control" id="exampleInputPassword1" value="{{values.password}}" >
                                     </div>
+                                    <!-- Confirm Password -->
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                                        <input required name="password2" type="password" class="form-control" id="exampleInputPassword1" value="{{values.password}}" >
+                                    </div>    
+                                    
+                                    <!-- Bottom Bar -->
                                     <div class="row center" style=" font-size: 18px !important;">
                                         <div class="col-md-4" style="vertical-align: middle;">
-                                            <p class="" style="vertical-align: middle; margin-bottom: 0%;"><a href="/create-account-candidate">Create Account</a></p>
+                                            <p class="" style="vertical-align: middle; margin-bottom: 0%;"><a href="/login-candidate">Log in</a></p>
                                         </div>
                                         <div class="col-md-4"></div>
-                                        <!-- Button -->
                                         <div class="col-md-4">
-                                            <button type="submit" class="top-section-button" style="background-color: #2e9191; border-radius: 5px !important; width: 80% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Sign in</button>
+                                            <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 80% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Create Account</button>
                                         </div>
+                                        <!-- Button -->
                                     </div>
                                     
                                   </form>

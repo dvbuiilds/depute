@@ -19,6 +19,8 @@ from django.urls import include, path
 urlpatterns = [
     path('', include('rms.urls')),
     path('', include('website.urls')),
+    path('', include('candidate.urls')),
+    path('', include('recruiter.urls')),
     path('admin/', admin.site.urls),
 ]
 # first argument in the path() function is route, second is view
