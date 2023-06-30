@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  /* pointer-events: none; */
 }
 
 /* Text Align Justify*/
@@ -539,5 +540,11 @@ li::marker{
 
 .categ-list{
   font-size: 20px;
+}
 
+.tick{
+  background: url("../img/tick.svg") no-repeat left top;
+  background-size: 20px 20px;
+  height: 50px;
+  padding-left: 0px; 
 }

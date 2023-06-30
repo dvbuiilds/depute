@@ -1,0 +1,67 @@
+{% extends 'base2.html' %}
+{% block content %}
+{% load static %}
+
+    <section style=" display: flex; align-items: center; justify-content: center; background-color: white;">
+        <div class="container">
+            <div class="row" style=" background-color: transparent;">
+                <div class="container center" >
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8 p-4" style="border-radius: 5px; background-color: #F6F9FF;">
+                        <div class="container-fluid">
+                            <div class="">
+                                <form action = "/" method="post">
+                                    <div class="row">
+                                        <h2>Final Step.</h2>
+                                    </div>
+                                    {% csrf_token %}
+                                    {% if error %}
+                                    <div class="row">
+                                        <p style="color: rgb(235, 0, 0);">*{{error}}</p>
+                                    </div>
+                                    {% endif %}
+                                    <!-- Heading -->
+                                    <div class="row my-4">
+                                        <h4>Personal Details</h4>
+                                    </div>
+                                    <!-- First Name -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Name</label>
+                                        <input required type="text" name="fname" class="form-control">
+                                    </div>
+                                    
+                                    <!-- Phone Number -->
+                                    <div class="mb-3">
+                                        <label for="" class="form-label">Contact Number</label>
+                                        <input required type="text" name="number" class="form-control">
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="mb-3">
+                                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                      <input required type="email" name="email" class="form-control" id="exampleInputEmail1" value="" aria-describedby="emailHelp">
+                                    </div>
+                                    <!-- Gender -->
+                                    <div class="mb-3">
+                                        <label for="exampleDataList" class="form-label">Gender</label>
+                                        <input required type="text" name="gender" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Select any one.">
+                                        <datalist id="datalistOptions">
+                                            <option value="Male">
+                                            <option value="Female">
+                                            <option value="Others">
+                                        </datalist>
+                                    </div>
+
+                                    <!-- Next -->
+                                    <div class="row mb-3">
+                                        <button type="submit" class="top-section-button " style="background-color: #2e9191; border-radius: 5px !important; width: 20% !important; height: auto; font-size: 18px; font-weight: 600 !important;" value="">Next</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
