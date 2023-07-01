@@ -48,7 +48,7 @@
                             <a class="nav-link mx-auto" style="text-align: center;" href="/create-account-candidate">Find Work</a>
                         </li>
                         {% if not request.session.cand_id %}
-                        <li class="py-1 mx-auto"><a href="/login-candidate"><button class="login-button">Get Hired</button></a>
+                        <li class="py-1 mx-auto"><a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfHn2JsDbRDpmiZD6Zc0Co8fVzKfSQ93p-Dn5PrU11PTe03Iw/viewform"><button class="login-button">Get Hired</button></a>
                         </li>
                         {% elif request.session.cand_id %}
                         <form action="/logout-user" method="post">
@@ -108,7 +108,7 @@
                                 <p class="mb-2 nav-item">FAQs</p>
                             </li>
                             <li>
-                                <p class="mb-2 nav-item">Careers</p>
+                                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfHn2JsDbRDpmiZD6Zc0Co8fVzKfSQ93p-Dn5PrU11PTe03Iw/viewform" class="text-decoration-none text-white"><p class="mb-2 nav-item">Careers</p></a>
                             </li>
                         </ul>
                     </div>
